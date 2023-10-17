@@ -1,3 +1,5 @@
+// Function to determine if 2 arrays are identical or not. Returns true if they match exactly, returns false if they do not match exactly
+
 const assertEqual = function (actual, expected) {
   if (actual === expected) {
     console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
