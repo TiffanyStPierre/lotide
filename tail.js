@@ -24,6 +24,11 @@ assertEqual(result[1], "Labs"); // ensure second element is "Labs"
 const result2 = tail(["Hello"]);
 assertEqual(result2.length, 0);
 
-// Test Case 2:
+// Test Case 3:
 const result3 = tail([]);
 assertEqual(result3.length, 0);
+
+// Test Case 4:
+const words = ["Yo Yo", "Lighthouse", "Labs"];
+tail(words);
+assertEqual(words.length, 3);
