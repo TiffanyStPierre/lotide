@@ -6,9 +6,8 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-const countLetters = function(stringToCount) {
+const countLetters = function(sentence) {
   const results = {}
-  const sentence = stringToCount.toLowerCase();
 
   for (const letter of sentence) {
       if (results[letter]) {
@@ -37,10 +36,10 @@ const result4 = countLetters(string4);
 const result5 = countLetters(string5);
 const result6 = countLetters(string6);
 
-assertEqual(result1["l"], 2);
+assertEqual(result1["L"], 2);
 assertEqual(result2["i"], 1);
 assertEqual(result3["r"], 3);
 assertEqual(result4["r"], undefined);
 assertEqual(result5["t"], undefined);
-assertEqual(result5["i"], 1);
+assertEqual(result5["I"], 1);
 assertEqual(result6["e"], 8);
