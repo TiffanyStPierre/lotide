@@ -35,7 +35,9 @@ const eqObjects = function(object1, object2) {
     const value2 = object2[key];
 
     if(Array.isArray(value1)) {
-      return eqArrays(value1, value2);
+      if (eqArrays(value1, value2) === false){
+        return false;
+      };
     }
 
     if (value1 !== value2) {
