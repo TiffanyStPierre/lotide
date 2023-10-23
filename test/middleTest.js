@@ -29,4 +29,11 @@ describe("#middle", () => {
   it("returns [16] for [2, 16, 65, 120, 89, 6, 3, 900, 12, 6, 8, 10, 13, 24]", () => {
     assert.deepEqual(middle([2, 16, 65, 120, 89, 6, 3, 900, 16, 19, 87, 12, 6, 8, 10, 13, 24]), [16]);
   });
+
+  it("make sure the original array was not altered by the middle function", () => {
+    const words = ["hello", "world", "lighthouse"];
+    const result = middle(words);
+    assert.deepEqual(result, ["world"]);
+    assert.strictEqual(words.length, 3);
+  });
 });
