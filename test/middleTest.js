@@ -1,25 +1,32 @@
+const assert = require('chai').assert;
 const middle = require('../middle');
-const assertArraysEqual = require('../assertArraysEqual');
 
-// TESTS 
+describe("#middle", () => {
+  it("returns [8, 10] for [2, 6, 8, 10, 13, 24]", () => {
+    assert.deepEqual(middle([2, 6, 8, 10, 13, 24]), [8, 10]);
+  });
 
-const test1 = middle([2, 6, 8, 10, 13, 24]);
-assertArraysEqual(test1, [8, 10]);
+  it("returns [8] for [2, 5, 8, 12, 24]", () => {
+    assert.deepEqual(middle([2, 5, 8, 12, 24]), [8]);
+  });
 
-const test2 = middle([2, 5, 8, 12, 24]);
-assertArraysEqual(test2, [8]);
+  it("returns [] for []", () => {
+    assert.deepEqual(middle([]), []);
+  });
 
-const test3 = middle([]);
-assertArraysEqual(test3, []);
+  it("returns [] for [2]", () => {
+    assert.deepEqual(middle([2]), []);
+  });
 
-const test4 = middle([2]);
-assertArraysEqual(test4, []);
+  it("returns [] for [13, 24]", () => {
+    assert.deepEqual(middle([13, 24]), []);
+  });
 
-const test5 = middle([13, 24]);
-assertArraysEqual(test5, []);
+  it("returns [3, 900] for [2, 16, 65, 120, 89, 6, 3, 900, 12, 6, 8, 10, 13, 24]", () => {
+    assert.deepEqual(middle([2, 16, 65, 120, 89, 6, 3, 900, 12, 6, 8, 10, 13, 24]), [3, 900]);
+  });
 
-const test6 = middle([2, 16, 65, 120, 89, 6, 3, 900, 12, 6, 8, 10, 13, 24]);
-assertArraysEqual(test6, [3, 900]);
-
-const test7 = middle([2, 16, 65, 120, 89, 6, 3, 900, 16, 19, 87, 12, 6, 8, 10, 13, 24]);
-assertArraysEqual(test7, [16]);
+  it("returns [16] for [2, 16, 65, 120, 89, 6, 3, 900, 12, 6, 8, 10, 13, 24]", () => {
+    assert.deepEqual(middle([2, 16, 65, 120, 89, 6, 3, 900, 16, 19, 87, 12, 6, 8, 10, 13, 24]), [16]);
+  });
+});
