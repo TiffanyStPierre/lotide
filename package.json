@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@tiffanystp/lotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "Mini clone of Lodash. A function library with an assortment of basic functions.",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/TiffanyStPierre/lotide.git"
   },
-  "author": "",
+  "author": "Tiffany St Pierre",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/TiffanyStPierre/lotide/issues"
